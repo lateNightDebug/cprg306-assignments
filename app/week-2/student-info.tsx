@@ -18,7 +18,7 @@ function MyParagraph() {
   return (
     <>
     <p>my github link</p>
-    <link href=""></link>
+    <link href="https://github.com/lateNightDebug/cprg306-assignments">git repository</link>
     </>
   );
 }
