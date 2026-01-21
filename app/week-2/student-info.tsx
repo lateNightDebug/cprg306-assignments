@@ -1,24 +1,12 @@
 import Link from "next/link";
 
-export default function Page() {
+export default function StudentInfo() {
   return (
     <div>
-      <MyHeading />
-      <MyParagraph />
+      <h1>Hello, My name is Luna</h1>
+      <p> Github:
+       <Link href="https://github.com/lateNightDebug/cprg306-assignments.git"><u>lateNightDebug</u></Link>
+       </p>
     </div>
-  );
-}
-
-function MyHeading() {
-  return <h1>Hello, My name is Luna</h1>;
-}
- 
-
-function MyParagraph() {
-  return (
-    <>
-    <p>my github link</p>
-    <link href="https://github.com/lateNightDebug/cprg306-assignments">git repository</link>
-    </>
-  );
+  )
 }
