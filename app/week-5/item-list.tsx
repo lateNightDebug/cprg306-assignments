@@ -42,11 +42,13 @@ export default function ItemList() {
         if (x > y) {return 1;}
         return 0;
         });
+
 return (
 <div>
     <div className="grid grid-flow-row grid-cols-3 gap-4 mb-4 border-b-4 justify-center ">
         <h2 className=" row-span-1 col-start-2 justify-self-center ">Sort by</h2>
         <button id="name"onClick={sortName} className=" col-start-1 border-2 p-3 mb-2">Name</button>
+        <button className="col-start-2 border-2 p-3 mb-2">reduce</button>
         <button id="Cat"onClick={sortCat} className=" col-start-3 border-2 p-3 mb-2">Category</button> 
     </div>
     {/* <ul>
