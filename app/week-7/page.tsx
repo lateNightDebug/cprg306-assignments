@@ -32,7 +32,7 @@ export default function week6(){
             <ul className = "space-y-2">
                 <ItemList items={items}/>
             </ul>
-            <MealIdeas />
+            <MealIdeas/>
             <Link className= "flex justify-center" href="/"><u>Return Home</u></Link>
             
         </div>

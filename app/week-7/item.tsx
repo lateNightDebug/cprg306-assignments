@@ -1,3 +1,4 @@
+import { useState } from "react"
 import MealIdeas from "./meal-ideas"
 
 type ItemProp={
@@ -6,18 +7,18 @@ type ItemProp={
     quantity:number
     category:string
     capitalizer?: (str:string)=>string
-    Selected:boolean
 }
 
 export default function Item({id,name,capitalizer, quantity, category}:ItemProp,){
-    const onSelect=() => {
-        
-    }
+   const handleSelect = (item: string) => {
+    console.log("selected item: ", item);
+    
+  };
 
     return(
         
         <li className= "border p-2 rounded mb-2 mt-2"
-        onClick={onSelect}>
+        onClick={() => handleSelect(name)}>
            <p className = "font-medium">{`${name}`}</p> 
            <p>{`Quantity: ${quantity}`}</p>
            <p>{`Category: ${capitalizer ? capitalizer(category) :category}`}</p>

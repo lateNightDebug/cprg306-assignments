@@ -1,6 +1,6 @@
 "use client";
 import Item from "./item";
-import {useState} from "react"
+import {useEffect, useState} from "react"
 
 type Item = {
     id: string
@@ -13,7 +13,9 @@ type ItemList ={
 }
 export default function ItemList({items}:ItemList) {
     const[sortBy, setSortBy] = useState<string>("name");
+    const[selecteditem,setSelectedItem] = useState<String>("")
 
+    useEffect
     const sortName = () =>{
         setSortBy("name")
     }

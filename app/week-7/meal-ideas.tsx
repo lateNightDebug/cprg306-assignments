@@ -44,7 +44,7 @@ console.log("its the list! ",mealList)
 
 export default function MealIdeas() {
     const[meals, setMeals] = useState<any[]>([]);
-    const[input,setInput] = useState("none")
+    const[input,setInput] = useState("")
 
     useEffect(()=>{console.log("meals: ", meals)},[meals])
 
@@ -70,14 +70,14 @@ export default function MealIdeas() {
             onChange={onChangeText}
             />
             <button onClick={getMeals}>Call Test API</button>
-
+            <h3>{`Here are some meals you can make with ${input}`}</h3>
             {meals.map((i:Meal, index:any)=>
             <div key={index}>
                 <div>
                     <li className= "border p-2 rounded mb-2 mt-2">
                         <p className = "font-medium">{`${i.name}`}</p> 
                         <p>{`meal ID: ${i.mealId}`}</p>
-                         {/* <Image src={`${i.strMealThumb}`} width={100} height={200} alt={"Photo of this meal!"}/>  */}
+                         {/* <Image src={`${i.url}`} width={100} height={200} alt={"Photo of this meal!"}/>  */}
                     </li>
                 </div>
             </div>)}
