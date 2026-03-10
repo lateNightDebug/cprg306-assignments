@@ -24,11 +24,13 @@
   },
   "include": [
     "next-env.d.ts",
+    "**/*.js",
+    "**/*.jsx",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/week-8/_utils/auth-context.jsx"  ],
   "exclude": ["node_modules"]
 }
