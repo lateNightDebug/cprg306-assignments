@@ -29,7 +29,7 @@ export default function NewItem({items, updatelist}:ItemList) {
         e.preventDefault(); 
         
         if (!name || name.length<2){
-            document.getElementById("error").innerHTML = "name must be longer than 1 character"
+            document.getElementById("error")!.innerHTML = "name must be longer than 1 character"
         }
         else {
             let newItem:Item = {name: name, quantity: Number(quantity), category: category, id:"placeholder"}
@@ -39,7 +39,7 @@ export default function NewItem({items, updatelist}:ItemList) {
         setQuantity("")
         setCategory("")
         setTouched(false)
-        document.getElementById("error").innerHTML = ""
+        document.getElementById("error")!.innerHTML = ""
         document.getElementById("submit")?.setAttribute("submit",'disabled');
         }
     };
@@ -56,7 +56,7 @@ export default function NewItem({items, updatelist}:ItemList) {
     const handleTouch = () =>{
         if (name=="") {
             setTouched(true);
-            document.getElementById("error").innerHTML = "you must enter a name"
+            document.getElementById("error")!.innerHTML = "you must enter a name"
         }
         else{
             setTouched(false)
